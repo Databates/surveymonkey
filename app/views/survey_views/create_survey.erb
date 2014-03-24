@@ -1,17 +1,16 @@
-<h1>Put Create Survey Logic Here</h1>
-
-<p>located in app/views/survey_views/create_survey.erb </p>
+ <h1 style='color:#008cba'>Create a Survey</h1>
 
 <div class="container">
-  <form action='/survey/create' method="POST">
-    <label>Survey Title:</label><input type="text" name="survey[title]"><br>
-    <label>Survey Description:</label><input type="text" name="survey[description]"><br>
-
-
-    <input type="hidden" name="survey[user_id]" value="<%=session[:user_id]%>">
-
-    <input type="submit" value="submit" class="button">
-  </form> 
+  <form id="create-survey-form" method="POST" autocomplete="off" style="color:#008cba">
+    <%= erb :"survey_views/_survey_tit_desc" %>
+  </form>
+  <form id="create-question-form" action='/survey/create/question' method="POST" autocomplete="off" style="color:#008cba">
+    <%= erb :"survey_views/_create_question_text" %>
+    <%= erb :"survey_views/_create_response_options" %>
+    <%= erb :"survey_views/_fixed-response_options" %>
+    <%= erb :"survey_views/_free-response_options" %>
+    <%= erb :"survey_views/_user-action-buttons" %>
+  </form>
 </div>
 
 

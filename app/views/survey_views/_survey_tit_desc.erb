@@ -1,0 +1,10 @@
+<!-- Title and Description of Survey -->
+<div id="survey-title">
+  <label style='color:#008cba'>Survey Title</label><input type="text" name="survey[title]"><br>
+  <label style='color:#008cba'>Survey Description</label><input type="text" name="survey[description]">
+  <input type="hidden" name="survey[user_id]" value="<%=session[:user_id]%>">
+  <input id="add-question-button" type="submit" value="Add Question" class="button">
+  <span id="create-survey-validations" style="color:red; margin-left: 30px"></span>
+  <br>
+</div>
+
